@@ -1,9 +1,11 @@
 # Virtual Envirement
 .Task/
 
+
 # Workstation
 .vscode/
 .idea/
+
 
 # Python Cache
 *.pyc
@@ -18,14 +20,17 @@ migrations*/
 .tmp*/
 .tmp*/*
 
+
 # Tests
 Test*/
 Test*/*
 test*/
 test*/*
 
+
 # COV
 htmlcov/
+
 
 #Setup Tools
 build/
