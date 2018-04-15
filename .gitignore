@@ -1,0 +1,33 @@
+# Virtual Envirement
+.Task/
+
+# Workstation
+.vscode/
+.idea/
+
+# Python Cache
+*.pyc
+
+
+# Migrations
+migrations*/
+
+# TMP
+.Tmp*/
+.Tmp*/*
+.tmp*/
+.tmp*/*
+
+# Tests
+Test*/
+Test*/*
+test*/
+test*/*
+
+# COV
+htmlcov/
+
+#Setup Tools
+build/
+dist/
+Task.egg-info/
