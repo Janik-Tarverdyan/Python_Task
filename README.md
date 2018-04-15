@@ -1,4 +1,4 @@
-# Python_Task [Lions Digital]
+# Python_Task
 
 ### Тестовое задание:
 ```
