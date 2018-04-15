@@ -1,0 +1,28 @@
+#title{
+  margin-left: 60px;
+}
+
+#header_menu{
+  margin-right: 60px;
+}
+
+#btn_create{
+  margin-bottom: 20px;
+  margin-top: 14px;
+  margin-right: 11px;
+  display: flex;
+  float: right;
+}
+
+#btn_cancel{
+  margin-top: 14px;
+  margin-left: 10px;
+}
+
+#btn_result{
+  display: flex;
+  margin-bottom: -15px;
+  float: left;
+  margin-top: 91px;
+  margin-left: -224px;
+}

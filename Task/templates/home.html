@@ -1,0 +1,68 @@
+{% extends "base/header.html" %}
+{% import "base/form.html" as form %}
+
+
+{% block title %}
+   {{ title }}
+{% endblock %}
+
+{% set Menu = {
+      '/api/new_rate': 'Новая ставка',
+   } -%}
+
+{#
+{% set Sub_Menu = {
+      '/logout': 'Logout',
+      '/about': 'About'
+   } -%}
+#}
+
+{% block body %}
+   <div class="col s12 m8 l9">
+    <!-- Dropdown Structure -->
+    <nav class="teal">
+      <div class="nav-wrapper">
+        <div id="title" class="col s12">
+          <a href="/" class="brand-logo">  {{ title }} </a>
+           <ul id="header_menu" class="right hide-on-med-and-down">
+
+            {% for item in Menu %}
+               <li> <a href="{{ item }}"> {{ Menu[item] }} </a></li>
+            {% endfor %}
+           </ul>
+            </div>
+         </div>
+      </nav>
+   </div>
+
+    <div class="container">
+    <!-- Page Content goes here -->
+    <div class="row">
+        <div class="col s12">
+            <div class="col grid-example s12 m12 teal lighten-1"></div>
+            <div class="z-depth-1">
+                <table class="centered">
+                    <thead>
+                    <tr>
+                        <th>Сумма</th>
+                        <th>Количество</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for item in Data %}
+                        <tr>
+                            <td>{{ item.rate }}</td>
+                            <td>{{ item.count }}</td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
+</div>

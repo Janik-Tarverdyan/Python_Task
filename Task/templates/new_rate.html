@@ -1,0 +1,78 @@
+{% extends "base/header.html" %}
+{% import "base/form.html" as form %}
+
+
+
+{% block title %}
+   {{ title }}
+{% endblock %}
+
+
+{% block body %}
+   <div class="col s12 m8 l9">
+    <!-- Dropdown Structure -->
+    <nav class="teal">
+      <div class="nav-wrapper">
+        <div id="title" class="col s12">
+          <a href="#" class="brand-logo">  {{ title }} </a>
+        </div>
+         </div>
+      </nav>
+   </div>
+
+
+   <div class="container">
+     <!-- Page Content goes here -->
+     <div class="row">
+
+       <div class="col grid-example s12 m4 l2 lighten-1"></div>
+       <div class="col grid-example s12 m4 l2 lighten-1"></div>
+       <div class="col s12 m6 l4 lighten-3" style="margin-top: 40px;">
+         {{ form.form(
+                      action='/api/new_rate',
+                      method='POST',
+                      class='col s12 z-depth-1'
+         ) }}
+
+
+         {{ form.input(
+                        type='number',
+                        label='Сумма',
+                        name='rate',
+                        icon_font='feuro_symbol',
+                        icon_style='margin-left: -32px',
+                        id='euro',
+                        for='first_name',
+                        class='input-field col s12'
+         ) }}
+
+
+         {{ form.input(
+                        type='number',
+                        label='Количество',
+                        name='count_rate',
+                        icon_font='account_balance_wallet',
+                        id='user_id',
+                        for='first_name',
+                        class='input-field col s12'
+         ) }}
+
+
+         {{ form.button(
+                        id='btn_create',
+                        label='Сделать ставку',
+                        class='btn waves-effect waves-light',
+                        name='action',
+                        icon_font='send',
+                        position='right'
+         ) }}
+
+        <a id="btn_cancel" class="btn waves-effect waves-light" href="/"> Отменить </a>
+
+       </div>
+     </div>
+   </div>
+
+
+{% endblock %}
+

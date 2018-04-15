@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> {% block title %}{% endblock %} </title>
+
+  {% block head %}{% endblock %}
+
+  <!-- Favicons-->
+  <link rel="icon" href="/static/images/favicon/favicon_task.png" sizes="32x32">
+
+
+  <!-- CORE CSS-->
+
+  <link href="/static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/static/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->
+    <link href="/static/css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+ <!--  <link href="/css/layouts/page-center.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
+
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="/static/js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/static/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+
+
+  <script src="/static/dist/js/DatePickerX.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function()
+      {
+        var $min = document.querySelector('.real [name="realDPX-min"]'),
+          $max = document.querySelector('.real [name="realDPX-max"]');
+
+        $min.DatePickerX.init({
+          mondayFirst: true,
+          minDate    : new Date(2017, 8, 13),
+          maxDate    : $max
+        });
+
+        $max.DatePickerX.init({
+          mondayFirst: true,
+          minDate    : $min,
+          //maxDate    : new Date(2017, 4, 25)
+        });
+
+      });
+  </script>
+  <link rel="stylesheet" href="/static/dist/css/DatePickerX.css">
+  <style>
+        label {
+          display: inline-block;
+        }
+        .real {
+          width: 100%;
+        }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <!-- Start Page Loading -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+  <!-- End Page Loading -->
+
+  {% block body %}{% endblock %}
+
+  <!-- ================================================
+    Scripts
+    ================================================ -->
+
+  <!-- jQuery Library -->
+  <script type="text/javascript" src="/static/js/plugins/jquery-1.11.2.min.js"></script>
+  <!--materialize js-->
+  <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+  <!--prism-->
+  <script type="text/javascript" src="/static/js/plugins/prism/prism.js"></script>
+  <!--scrollbar-->
+  <script type="text/javascript" src="/static/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+      <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="/static/js/plugins.min.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="/static/js/custom-script.js"></script>
+
+  <script type="text/javascript">
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+
+</html>
