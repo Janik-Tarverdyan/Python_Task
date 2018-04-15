@@ -26,6 +26,7 @@
 > 6. `python Task db init`
 > 7. `python Task db migrate`
 > 8. `python Task db upgrate`
+> 9. `python Task runserver`
 
 ## Рекомендации
 >**Рекомендую использовать Firefox браузер, это самый лучший браузер для разработчиков и тестировщиков.**
